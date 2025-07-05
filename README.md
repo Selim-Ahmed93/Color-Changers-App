@@ -31,7 +31,7 @@ A simple and interactive JavaScript-based app that allows users to change the ba
 
 ## 📸 Screenshots
 
-![screenshot](https://via.placeholder.com/800x400.png?text=Screenshot+Coming+Soon)
+![screenshot]()
 
 ---
 
