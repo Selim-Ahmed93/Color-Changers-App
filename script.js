@@ -7,14 +7,17 @@ const mainContainer = document.querySelector('.container')
 
 const colorArray = ["red","white","blue","black","LightCoral","cyan","tomato","Aqua","yellow","yellowGreen"];
 
+let color = "#1f64a9"; // default color
+
 const randomColorGenerator = () => {
   const randomNumber =Math.floor( Math.random()*colorArray.length);
   return colorArray[randomNumber]
 };
 
 const randomBtnHandler = () =>{
- let color = randomColorGenerator();
- colorChange(color);
+  color = randomColorGenerator();
+  colorChange(color);
+  
 }
 const applyBtnHandler = () =>{
   const color = inputBox.value;
@@ -25,7 +28,9 @@ const colorChange = (color) => {
   mainContainer.style.backgroundColor = color;
   
   currentColor.innerText = color;
+    inputBox.value = color;
 }
+colorChange(color); // global scope
 
 randomButton.addEventListener('click',randomBtnHandler);
 applyButton.addEventListener('click',applyBtnHandler);
